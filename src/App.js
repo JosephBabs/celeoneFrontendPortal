@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react
 import { auth, db } from './firebase';
 import { signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth';
 import { collection, addDoc, query, where, getDocs, serverTimestamp } from 'firebase/firestore';
-import { FaPlay, FaLock, FaUser, FaVideo, FaCopy } from 'react-icons/fa';
+import { FaPlay,  FaUser, FaVideo, FaCopy } from 'react-icons/fa';
 
 // --- Components ---
 
@@ -128,7 +128,7 @@ const Dashboard = ({ user }) => {
   const [channels, setChannels] = useState([]);
   const [newChannelName, setNewChannelName] = useState('');
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const fetchChannels = async () => {
